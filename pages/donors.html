@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Donor — BloodAware</title>
+  <meta name="description" content="Register as a blood donor and help save lives in your community." />
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <svg class="drop" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 C30 35 20 50 20 65 C20 80 33 90 50 90 C67 90 80 80 80 65 C80 50 70 35 50 10Z" fill="#e11d48"/><ellipse cx="42" cy="55" rx="8" ry="5" fill="#fff" opacity="0.4"/></svg>
+        <span>BloodAware</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="introduction.html" class="nav-link">Introduction</a></li>
+        <li><a href="blood-groups.html" class="nav-link">Blood Groups</a></li>
+        <li><a href="blood-cells.html" class="nav-link">Blood Cells</a></li>
+        <li><a href="transfusion.html" class="nav-link">Transfusion</a></li>
+        <li><a href="donors.html" class="nav-link">Donors</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="animate-fade-in-up">Become a Donor</h1>
+      <p class="animate-fade-in-up delay-1">One donation. Up to three lives saved. Start your journey today.</p>
+      <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> <span>Donors</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-block">
+        <h2 class="reveal">Who Can Donate?</h2>
+        <p class="reveal">Most healthy adults can donate blood. Here are the general eligibility requirements:</p>
+        <ul class="reveal">
+          <li>Age: Between 18 and 65 years old</li>
+          <li>Weight: At least 50 kg (110 lbs)</li>
+          <li>Health: In good general health, feeling well on donation day</li>
+          <li>Hemoglobin: At least 12.5 g/dL</li>
+          <li>No recent tattoos or piercings (within 3-6 months)</li>
+          <li>Not pregnant or breastfeeding</li>
+        </ul>
+
+        <div class="info-banner reveal">
+          <p>Eligibility criteria may vary by country and blood bank. Always check with your local donation center for specific requirements.</p>
+        </div>
+      </div>
+
+      <!-- Donor Registration Form -->
+      <div style="max-width: 640px; margin: var(--space-5) auto;">
+        <h2 class="section-title reveal">Donor Registration</h2>
+        <p class="section-subtitle reveal">Fill out the form below to register as a blood donor</p>
+
+        <form id="donorForm" class="form-card reveal" novalidate>
+          <div class="form-success"></div>
+
+          <div class="form-field">
+            <label for="dName">Full Name <span class="req">*</span></label>
+            <input type="text" id="dName" name="name" placeholder="Enter your full name" />
+            <div class="error-msg"></div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="dAge">Age <span class="req">*</span></label>
+              <input type="number" id="dAge" name="age" placeholder="18-65" min="18" max="65" />
+              <div class="error-msg"></div>
+            </div>
+            <div class="form-field">
+              <label for="dBloodGroup">Blood Group <span class="req">*</span></label>
+              <select id="dBloodGroup" name="bloodGroup">
+                <option value="">— Select —</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="unknown">I don't know</option>
+              </select>
+              <div class="error-msg"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="dPhone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="dPhone" name="phone" placeholder="e.g. +1 234 567 890" />
+              <div class="error-msg"></div>
+            </div>
+            <div class="form-field">
+              <label for="dCity">City <span class="req">*</span></label>
+              <input type="text" id="dCity" name="city" placeholder="Your city" />
+              <div class="error-msg"></div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="dEmail">Email Address</label>
+            <input type="email" id="dEmail" name="email" placeholder="you@example.com" />
+            <div class="error-msg"></div>
+          </div>
+
+          <div class="form-field">
+            <label for="dMessage">Additional Information (optional)</label>
+            <textarea id="dMessage" name="message" placeholder="Any medical conditions, medications, or availability notes..."></textarea>
+            <div class="error-msg"></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Register as Donor</button>
+        </form>
+      </div>
+
+      <!-- Donation Process -->
+      <div class="content-block" style="margin-top: var(--space-5);">
+        <h2 class="reveal">The Donation Process</h2>
+        <div class="card-grid reveal" style="margin: var(--space-3) 0;">
+          <div class="card"><h3>1. Registration</h3><p>Sign in, show ID, and complete a health questionnaire. Takes about 10 minutes.</p></div>
+          <div class="card"><h3>2. Mini-Physical</h3><p>A health check of pulse, blood pressure, temperature, and hemoglobin levels.</p></div>
+          <div class="card"><h3>3. Donation</h3><p>The actual blood draw takes 8-10 minutes. About 470ml is collected.</p></div>
+          <div class="card"><h3>4. Refreshment</h3><p>Rest for 10-15 minutes with snacks and drinks to replenish energy.</p></div>
+        </div>
+
+        <div class="info-banner reveal">
+          <p>The entire process takes about 45-60 minutes, but the actual blood draw is only 8-10 minutes. You can donate whole blood every 56 days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo"><svg class="drop" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 C30 35 20 50 20 65 C20 80 33 90 50 90 C67 90 80 80 80 65 C80 50 70 35 50 10Z" fill="#e11d48"/></svg><span>BloodAware</span></a>
+        <p>Empowering people with knowledge about blood — because every drop counts.</p>
+      </div>
+      <div class="footer-col"><h4>Learn</h4><a href="introduction.html">Introduction</a><a href="blood-groups.html">Blood Groups</a><a href="blood-cells.html">Blood Cells</a><a href="blood-levels.html">Blood Levels</a></div>
+      <div class="footer-col"><h4>Get Involved</h4><a href="donors.html">Become a Donor</a><a href="awareness.html">Awareness</a><a href="activities.html">Activities</a><a href="gallery.html">Gallery</a></div>
+      <div class="footer-col"><h4>Connect</h4><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="feedback.html">Feedback</a><a href="transfusion.html">Transfusion</a></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; <span id="year">2026</span> BloodAware. An educational project. Built with HTML, CSS &amp; JavaScript.</p></div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/forms.js"></script>
+</body>
+</html>
